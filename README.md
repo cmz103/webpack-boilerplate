@@ -3,6 +3,7 @@ Includes:
 *  Webpack Dev Server
 *  Webpack Clean Plugin
 *  Webpack HTML Plugin
+*  Typescript
 *  TS-Loader
 *  CSS Loader
 *  CSV Loader
