@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Creates it's own index.html file (dynamic, so you don't have to put static values)
 const CleanWebpackPlugin = require('clean-webpack-plugin'); // Cleans dist folder for unsused assets
+const webpack = require('webpack');
 
 module.exports = {
     entry: {
@@ -9,13 +10,15 @@ module.exports = {
     },
     devtool: 'inline-source-map', // Generate Source Maps for debugging
     devServer: {
-        contentBase: './dist' //Tell webpack-dev-server where to look
+        contentBase: './dist', //Tell webpack-dev-server where to look
+        hot: true // Tell the dev-server we're using HMR
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             title: 'Output Management'
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin() // Enable HMR (Hot Module Replacement)
     ],
     output: {
         filename: '[name].bundle.js',

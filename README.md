@@ -9,3 +9,6 @@ Includes:
 *  File Loader
 *  Style Loader
 *  XML Loader
+
+left off:
+https://webpack.js.org/guides/hot-module-replacement/
