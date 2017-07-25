@@ -1,4 +1,10 @@
-Includes:
+# In Development:
+`npm start`
+
+# Build for Production:
+`webpack -p`
+
+## Includes:
 *  Webpack
 *  Webpack Dev Server
 *  Webpack Clean Plugin
@@ -10,6 +16,3 @@ Includes:
 *  File Loader
 *  Style Loader
 *  XML Loader
-
-left off:
-https://webpack.js.org/guides/hot-module-replacement/
