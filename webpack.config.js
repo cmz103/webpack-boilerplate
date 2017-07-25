@@ -18,11 +18,14 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Output Management'
         }),
-        new webpack.HotModuleReplacementPlugin() // Enable HMR (Hot Module Replacement)
+        new webpack.HotModuleReplacementPlugin(), // Enable HMR (Hot Module Replacement: https://webpack.js.org/guides/hot-module-replacement/)
     ],
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
+    },
+    resolve: {
+        extensions: [".tsx", ".ts", ".js"] //https://webpack.js.org/guides/typescript/
     },
     module: {
         rules: [
@@ -58,6 +61,13 @@ module.exports = {
             }, {
                 test: /\.xml$/,
                 use: ['xml-loader']
+            },
+
+            // Handle Typescript
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/
             }
 
         ]
