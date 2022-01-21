@@ -1,18 +1,5 @@
 # In Development:
-`npm start`
+`npm run build`
 
-# Build for Production:
-`webpack -p`
-
-## Includes:
-*  Webpack
-*  Webpack Dev Server
-*  Webpack Clean Plugin
-*  Webpack HTML Plugin
-*  Typescript
-*  TS-Loader
-*  CSS Loader
-*  CSV Loader
-*  File Loader
-*  Style Loader
-*  XML Loader
+Need to complete
+https://webpack.js.org/guides/getting-started/
